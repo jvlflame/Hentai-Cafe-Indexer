@@ -1,5 +1,5 @@
 # Hentai-Cafe-Indexer
-Index links from Hentai.Cafe to a .txt file. Best used with [gallery-dl](https://github.com/mikf/gallery-dl) to download all the links from the text file.
+Index links from Hentai.Cafe to a .txt file. Best used with [gallery-dl](https://github.com/mikf/gallery-dl) to download all the links from the text file. Mostly used for if you want to download galleries with a specific tag, rather than just bulk torrenting fakku rips.
 
 ## Demo
 ![Demo](https://github.com/jvlflame/Hentai-Cafe-Indexer/blob/master/demo.gif?raw=true)
