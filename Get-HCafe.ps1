@@ -1,10 +1,13 @@
 function Get-HCafe {
-    [cmdletbinding()]
+    [CmdletBinding()]
     param(
+        [Parameter(Mandatory=$true)]
         [int]$StartPage,
+        [Parameter(Mandatory=$true)]
         [int]$EndPage,
-        [string]$Tag,
-        [string]$ExportPath
+        [Parameter(Mandatory=$true)]
+        [System.IO.FileInfo]$ExportPath,
+        [string]$Tag
     )
 
     Remove-Item $ExportPath -Force -ErrorAction SilentlyContinue
@@ -31,7 +34,7 @@ function Get-HCafe {
                             $_ -notlike '#top'
                         } | Select-Object -Unique | Out-File $ExportPath -Force -Append -Encoding utf8
 
-        Write-Output "Page $Counter added to $ExportPath"
+        Write-Verbose "Page $Counter added to $ExportPath"
     }
 
     # UTF8-BOM to UTF8
